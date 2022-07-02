@@ -7,12 +7,12 @@ const useFetch = url => {
 
   useEffect(() => {
     const abortController = new AbortController();
-    // not async
+   
     fetch(url, { signal: abortController.signal })
       .then(res => {
         if (!res.ok) throw new Error('Error from server');
         return res.json();
-      }) // {name:'ali'} in json {"name":"ali"}
+      }) 
       .then(data => {
         setData(data.data);
         setLoading(false);
@@ -26,15 +26,15 @@ const useFetch = url => {
         setLoading(false);
       });
     return () => {
-      abortController.abort(); // throw new Error('AbortError');
+      abortController.abort(); 
       setData(null);
       setError(null);
       setLoading(true);
-    }; // clean up
+    }; 
   }, [url]);
 
-  return { data, error, loading }; // Tuple
-  // const [a, ,c] = useFetch
+  return { data, error, loading }; 
+ 
 };
 
 export default useFetch;

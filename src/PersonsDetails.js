@@ -1,28 +1,4 @@
-// import { Link, useParams } from 'react-router-dom';
-// import useFetch from './useFetch';
 
-// const PersonsDetails = () => {
-//   const { id } = useParams();
-//   const { data: persons, error, loading } = useFetch('http://icloudjo.com:8050/REST/persons/' + id);
-//   return (
-//     <div>
-//       {loading && <div>loading...</div>}
-//       {error && <div>{error}</div>}
-//       {persons && persons.map((persons,index) =>(
-//         <p key= {index}>
-       
-//       {persons.first_name} 
-//       {persons.middle_name} 
-//        {persons.last_name}
-//        <br /> <br />
-//        {persons.email}
-//       </p> )
-//        )}
-//       <Link to='/'>&larr; Go back</Link>
-//     </div>
-//   );
-// };
-// export default PersonsDetails;
 
 
 
